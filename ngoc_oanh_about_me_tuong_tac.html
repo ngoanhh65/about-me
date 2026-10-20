@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f7edb0">
+<title>Ngọc Oanh | Một chiếc lá nhỏ</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+:root{--cream:#fffdf2;--butter:#f8edaa;--yellow:#f4d96b;--green:#66845b;--sage:#dce8cb;--deep:#304b37;--text:#344535;--muted:#74806c;--white:#fffef8}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--text);font-family:'DM Sans',sans-serif;line-height:1.7;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.16;background-image:radial-gradient(#91a27a 0.7px,transparent .7px);background-size:18px 18px;z-index:-1}
+nav{max-width:1120px;margin:auto;padding:24px 26px;display:flex;justify-content:space-between;align-items:center}.brand{font-weight:700;letter-spacing:.08em;color:var(--deep)}nav a{color:var(--deep);text-decoration:none;font-size:.92rem;margin-left:24px}nav a:hover{color:#a88920}
+.wrap{max-width:1060px;margin:auto;padding:0 26px}.hero{min-height:590px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:40px;padding-top:28px;padding-bottom:75px}
+.kicker{display:inline-flex;align-items:center;gap:9px;background:#f5efc8;border:1px solid #ece2a5;border-radius:99px;padding:7px 15px;color:#66794e;font-size:.82rem;font-weight:700}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif}h1{font-size:clamp(3.2rem,7vw,5.7rem);line-height:1.04;letter-spacing:-.04em;color:var(--deep);margin:23px 0 18px}h1 em{font-style:normal;color:#b29a32} .lead{font-size:1.08rem;color:var(--muted);max-width:520px}.details{display:flex;flex-wrap:wrap;gap:10px;margin-top:25px}.tag{background:#fffef8;border:1px solid #e6e8d4;padding:8px 13px;border-radius:99px;font-size:.86rem}
+.art{position:relative;min-height:390px;display:grid;place-items:center}.sun{position:absolute;width:285px;height:285px;background:var(--butter);border-radius:50%;right:8%;top:7%;box-shadow:0 0 0 18px #f8edaa44}.plant-card{position:relative;z-index:1;width:min(330px,90%);height:355px;background:#e5edcf;border:8px solid var(--white);border-radius:48% 48% 28px 28px;box-shadow:0 20px 50px #50683a1b;display:flex;align-items:center;justify-content:center;overflow:hidden}.plant-card svg{width:92%;height:92%}.float{position:absolute;z-index:2;background:#fffef8;border:1px solid #e7e5ca;border-radius:18px;padding:12px 16px;box-shadow:0 10px 25px #42533a12;font-size:.86rem}.float.one{left:0;top:20%}.float.two{right:0;bottom:12%}
+.section{padding:60px 0}.section-head{text-align:center;max-width:650px;margin:0 auto 30px}.eyebrow{color:#9c8a2b;text-transform:uppercase;letter-spacing:.18em;font-size:.76rem;font-weight:700}.section h2{font-size:clamp(2rem,4vw,3rem);line-height:1.2;color:var(--deep);margin:8px 0 12px}.section-head p{color:var(--muted);margin:0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:var(--white);border:1px solid #e9ebd9;border-radius:24px;padding:25px;box-shadow:0 12px 35px #435b3610;transition:transform .2s}.card:hover{transform:translateY(-5px)}.icon{width:53px;height:53px;border-radius:17px;background:#f6efc5;display:grid;place-items:center;font-size:1.7rem}.card:nth-child(2) .icon{background:#e3edda}.card:nth-child(3) .icon{background:#f7e4c8}.card h3{font-size:1.4rem;color:var(--deep);margin:15px 0 7px}.card p{color:var(--muted);font-size:.95rem;margin:0}
+.note{margin:15px auto 0;max-width:850px;background:#edf2e2;border-radius:28px;padding:clamp(25px,5vw,48px);text-align:center;position:relative;overflow:hidden}.note:before,.note:after{content:"✿";position:absolute;font-size:4rem;color:#c3d5ac;opacity:.7}.note:before{left:20px;top:0}.note:after{right:22px;bottom:-10px}.note blockquote{font-family:'Playfair Display',Georgia,serif;font-size:clamp(1.4rem,3vw,2.1rem);line-height:1.55;color:var(--deep);margin:8px auto;max-width:700px}.note p{color:#65775e;max-width:650px;margin:14px auto 0}
+.closing{display:flex;align-items:center;justify-content:space-between;gap:24px;margin:55px 0 65px;padding:28px 32px;background:#f8edb0;border-radius:25px}.pill-list{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:22px}.pill-list span{padding:9px 14px;border-radius:99px;background:#fffef8;border:1px solid #e5e8d6;font-size:.9rem}.mini-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.timeline .card{border-top:4px solid #d7dfb7}.favorite-box{background:#fffef8;border:1px dashed #c9d5b4;border-radius:24px;padding:28px}.favorite-box h3{color:var(--deep);margin-top:0}.small-note{font-size:.88rem;color:var(--muted)}.closing h2{font-size:1.7rem;color:var(--deep);margin:0}.closing p{margin:4px 0 0;color:#65734e}.flower{font-size:3rem}
+footer{text-align:center;padding:28px 20px 38px;color:#7b866f;font-size:.86rem;border-top:1px solid #e8e9d9}footer strong{color:var(--deep)}
+@media(max-width:760px){nav{padding:20px;align-items:flex-start;gap:14px;flex-direction:column}nav a{margin:0 16px 0 0}.hero{grid-template-columns:1fr;gap:8px;padding-top:35px}.art{min-height:340px}.sun{width:230px;height:230px}.plant-card{height:300px;width:275px}.grid{grid-template-columns:1fr}.section{padding:42px 0}.closing{align-items:flex-start}.float.one{left:2%}.float.two{right:1%}}
+
+/* Interactive touches */
+:root{scroll-padding-top:24px}
+#reading-progress{position:fixed;top:0;left:0;width:0;height:4px;background:linear-gradient(90deg,#f0d35c,#86a875);z-index:9999;transition:width .08s linear}
+nav{position:relative;z-index:10}
+nav a{display:inline-block;transition:transform .2s,color .2s}
+nav a:hover{transform:translateY(-2px)}
+.card{cursor:pointer;position:relative;overflow:hidden;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.card:hover{transform:translateY(-8px) rotate(-.4deg);box-shadow:0 18px 38px #435b3620;border-color:#d7dfb7}
+.card:after{content:'✦';position:absolute;right:18px;top:15px;color:#c5b45a;opacity:0;transform:scale(.5);transition:all .25s}
+.card:hover:after{opacity:.9;transform:scale(1)}
+.card .icon{transition:transform .3s ease}
+.card:hover .icon{transform:rotate(-7deg) scale(1.08)}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.hero .kicker{animation:softPop .7s ease both}
+.hero h1{animation:fadeUp .75s .08s ease both}
+.hero .lead{animation:fadeUp .75s .18s ease both}
+.hero .details{animation:fadeUp .75s .28s ease both}
+.plant-card{animation:floatPlant 5s ease-in-out infinite}
+.float.one{animation:drift 4s ease-in-out infinite}
+.float.two{animation:drift 4.8s ease-in-out infinite reverse}
+@keyframes fadeUp{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}
+@keyframes softPop{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:scale(1)}}
+@keyframes floatPlant{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes drift{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-7px) rotate(2deg)}}
+.interactive-row{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin:24px 0}
+.fun-button{border:0;border-radius:999px;background:var(--deep);color:#fffef8;padding:12px 19px;font:600 .95rem 'DM Sans',sans-serif;cursor:pointer;box-shadow:0 7px 18px #304b3720;transition:transform .2s,box-shadow .2s,background .2s}
+.fun-button:hover{transform:translateY(-3px);box-shadow:0 11px 23px #304b3730;background:#47694c}
+.fun-button.secondary{background:#f5edc0;color:var(--deep);border:1px solid #e7dda9}
+#surprise-message{min-height:32px;text-align:center;color:var(--deep);font-weight:600;margin:8px auto 0;max-width:650px}
+#detail-modal{position:fixed;inset:0;background:#20332580;display:none;align-items:center;justify-content:center;padding:20px;z-index:10000}
+#detail-modal.open{display:flex;animation:softPop .2s ease}
+.modal-card{max-width:480px;width:100%;background:var(--cream);border:1px solid #e5e8d6;border-radius:28px;padding:30px;box-shadow:0 25px 80px #17241735;position:relative}
+.modal-card h3{font-size:1.8rem;color:var(--deep);margin:0 35px 10px 0}
+.modal-card p{color:var(--muted);margin:0}
+.modal-close{position:absolute;right:17px;top:14px;border:0;background:#e8efd9;color:var(--deep);width:36px;height:36px;border-radius:50%;font-size:1.3rem;cursor:pointer}
+#top-button{position:fixed;right:18px;bottom:18px;width:46px;height:46px;border:0;border-radius:50%;background:#f4df83;color:#304b37;font-size:1.2rem;box-shadow:0 8px 24px #304b3722;cursor:pointer;opacity:0;pointer-events:none;transform:translateY(8px);transition:.25s;z-index:99}
+#top-button.show{opacity:1;pointer-events:auto;transform:translateY(0)}
+.sparkle{position:fixed;pointer-events:none;z-index:9998;font-size:20px;animation:sparkleUp .85s ease-out forwards}
+@keyframes sparkleUp{0%{opacity:0;transform:translateY(8px) scale(.6) rotate(0)}20%{opacity:1}100%{opacity:0;transform:translateY(-42px) scale(1.3) rotate(35deg)}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+@media(max-width:760px){.timeline,.mini-grid{grid-template-columns:1fr}.interactive-row{align-items:stretch}.fun-button{width:100%}}
+
+</style>
+</head>
+<body>
+<nav><div class="brand">☘ NGỌC OANH</div><div><a href="#about">Về mình</a><a href="#likes">Sở thích</a><a href="#strengths">Điểm riêng</a><a href="#favorites">Yêu thích</a><a href="#goals">Mục tiêu</a><a href="#dream">Điều mình tin</a></div></nav>
+<main class="wrap">
+<section class="hero" id="about">
+<div>
+<div class="kicker">☀ Một ngày dịu dàng để bắt đầu</div>
+<h1>Xin chào,<br>mình là <em>Oanh.</em></h1>
+<p class="lead">Mình là Ngọc Oanh, cô học trò lớp 10A06 của trường THPT Phú Nhuận. Đây là khu vườn nhỏ của mình — nơi cất giữ những điều mình yêu, những điều mình học và phiên bản tốt hơn mà mình đang vun trồng mỗi ngày.</p>
+<div class="details"><span class="tag">🌼 10A06</span><span class="tag">🌿 THPT Phú Nhuận</span><span class="tag">🍋 Team vàng & xanh lá</span></div>
+</div>
+<div class="art" aria-label="Minh họa khu vườn pastel">
+<div class="sun"></div>
+<div class="float one">☀️ Little sunshine</div>
+<div class="plant-card">
+<svg viewBox="0 0 320 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cành lá và quả chanh">
+<path d="M155 330 C150 265 178 205 155 125 C150 105 145 88 143 66" fill="none" stroke="#66845b" stroke-width="8" stroke-linecap="round"/>
+<path d="M157 245 C115 235 89 207 77 179" fill="none" stroke="#66845b" stroke-width="6" stroke-linecap="round"/>
+<path d="M162 205 C205 196 231 165 239 137" fill="none" stroke="#66845b" stroke-width="6" stroke-linecap="round"/>
+<path d="M153 159 C119 145 106 116 108 92" fill="none" stroke="#66845b" stroke-width="6" stroke-linecap="round"/>
+<path d="M147 115 C178 98 189 73 183 50" fill="none" stroke="#66845b" stroke-width="6" stroke-linecap="round"/>
+<g fill="#8eae78" stroke="#66845b" stroke-width="2">
+<path d="M105 200 C62 204 48 173 57 148 C93 148 113 169 105 200Z"/>
+<path d="M180 205 C184 166 216 151 246 160 C239 193 211 211 180 205Z"/>
+<path d="M117 143 C82 130 74 99 90 76 C120 91 132 117 117 143Z"/>
+<path d="M165 112 C163 78 188 55 214 58 C213 88 193 109 165 112Z"/>
+<path d="M153 265 C120 255 109 231 121 209 C150 219 164 242 153 265Z"/>
+</g>
+<g transform="translate(215 246) rotate(-25)">
+<ellipse cx="0" cy="0" rx="39" ry="49" fill="#f3d65f" stroke="#d7b943" stroke-width="2"/>
+<ellipse cx="0" cy="0" rx="31" ry="41" fill="#f8e681"/>
+<path d="M0 -45 L0 -51" stroke="#66845b" stroke-width="5" stroke-linecap="round"/>
+<path d="M0 -48 C10 -64 26 -63 31 -53 C18 -43 8 -43 0 -48Z" fill="#739661"/>
+<circle cx="-12" cy="-11" r="3" fill="#fff5bd"/><circle cx="13" cy="8" r="2.5" fill="#fff5bd"/>
+</g>
+<g transform="translate(76 278)">
+<circle cx="0" cy="0" r="8" fill="#e7bd56"/><g fill="#fffdf2" stroke="#e7dca7" stroke-width="1.5">
+<ellipse cx="0" cy="-16" rx="9" ry="15"/><ellipse cx="15" cy="-5" rx="9" ry="15" transform="rotate(60 15 -5)"/><ellipse cx="10" cy="13" rx="9" ry="15" transform="rotate(125 10 13)"/><ellipse cx="-10" cy="13" rx="9" ry="15" transform="rotate(-125 -10 13)"/><ellipse cx="-15" cy="-5" rx="9" ry="15" transform="rotate(-60 -15 -5)"/>
+</g><circle cx="0" cy="0" r="7" fill="#e7bd56"/></g>
+<path d="M80 330 Q160 305 240 330" fill="none" stroke="#b5c99a" stroke-width="3" stroke-linecap="round"/>
+</svg>
+</div>
+<div class="float two">🍋 Grow at your own pace</div>
+</div>
+</section>
+<div class="interactive-row" aria-label="Tương tác nhỏ">
+  <button class="fun-button" id="message-button" type="button">🌼 Gửi mình một lời nhắn</button>
+  <button class="fun-button secondary" id="surprise-button" type="button">🍋 Bấm thử điều bất ngờ</button>
+</div>
+<p id="surprise-message" aria-live="polite">Một góc nhỏ để khám phá — cứ bấm thử nhé!</p>
+<section class="section" id="likes">
+<div class="section-head"><div class="eyebrow">Những điều nho nhỏ</div><h2>Mình thích những ngày có…</h2><p>Không cần điều gì quá lớn lao; đôi khi niềm vui nằm trong những điều rất bình thường.</p></div>
+<div class="grid">
+<article class="card"><div class="icon">🎨</div><h3>Màu sắc & hội họa</h3><p>Mình thích vẽ tranh, thử những cách thể hiện mới và biến các ý tưởng bé xíu thành một điều gì đó có hình hài.</p></article>
+<article class="card"><div class="icon">🌿</div><h3>Những chuyến đi</h3><p>Đi du lịch để ngắm những nơi mới, gặp những con người thú vị và gom góp thêm thật nhiều câu chuyện cho riêng mình.</p></article>
+<article class="card"><div class="icon">📚</div><h3>Sách & khoảng lặng</h3><p>Đọc sách, nghe nhạc và dành chút thời gian cho bản thân — để nghỉ ngơi, suy ngẫm và nhìn thế giới bằng nhiều góc độ hơn.</p></article>
+</div>
+</section>
+
+<section class="section" id="strengths">
+  <div class="section-head">
+    <div class="eyebrow">Một chút về tính cách</div>
+    <h2>Những điều tạo nên mình</h2>
+    <p>Mình vẫn đang khám phá bản thân từng ngày, học cách phát huy điểm mạnh và dịu dàng hơn với những điều mình chưa làm tốt.</p>
+  </div>
+  <div class="grid">
+    <article class="card"><div class="icon">💡</div><h3>Thích tìm hiểu</h3><p>Mình thường tò mò về những điều mới, thích tìm hiểu nhiều góc nhìn và thử tìm lời giải khi gặp một vấn đề thú vị.</p></article>
+    <article class="card"><div class="icon">📝</div><h3>Học theo cách của mình</h3><p>Mình thích ghi chú bằng sơ đồ tư duy, màu sắc và hình ảnh để kiến thức dễ hiểu, dễ nhớ hơn.</p></article>
+    <article class="card"><div class="icon">🤍</div><h3>Biết lắng nghe</h3><p>Mình mong có thể trở thành người bạn đáng tin cậy, biết lắng nghe và sẵn sàng giúp đỡ khi ai đó cần.</p></article>
+  </div>
+</section>
+
+<section class="section" id="favorites">
+  <div class="section-head">
+    <div class="eyebrow">Những niềm vui bé xíu</div>
+    <h2>My comfort things ☁️</h2>
+    <p>Một vài điều nhỏ có thể khiến một ngày bình thường trở nên dễ chịu hơn.</p>
+  </div>
+  <div class="favorite-box">
+    <div class="pill-list">
+      <span>🍋 Vàng bơ & xanh lá</span><span>🎨 Vẽ vời</span><span>📚 Một cuốn sách hay</span>
+      <span>🎧 Nhạc hợp tâm trạng</span><span>🌿 Không gian nhiều cây xanh</span><span>📸 Lưu lại kỷ niệm</span>
+      <span>🧋 Một món uống yêu thích</span><span>🌅 Ngắm cảnh khi đi xa</span><span>💌 Những lời động viên</span>
+    </div>
+    <p class="small-note" style="text-align:center;margin:20px 0 0">Đây là khu vực có thể thay đổi bất cứ lúc nào — vì sở thích của mình cũng sẽ lớn lên cùng mình.</p>
+  </div>
+</section>
+
+<section class="section" id="goals">
+  <div class="section-head">
+    <div class="eyebrow">Little steps, big growth</div>
+    <h2>Những điều mình muốn vun trồng</h2>
+    <p>Mỗi mục tiêu không cần bắt đầu thật lớn. Chỉ cần bắt đầu bằng một bước nhỏ và kiên trì với nó.</p>
+  </div>
+  <div class="timeline">
+    <article class="card"><div class="icon">📖</div><h3>Trong học tập</h3><p>Học chủ động hơn, hiểu bài chắc hơn và dám hỏi khi chưa hiểu thay vì ngại ngần.</p></article>
+    <article class="card"><div class="icon">🌱</div><h3>Trong bản thân</h3><p>Rèn sự tự tin, quản lý thời gian tốt hơn và học cách cân bằng giữa cố gắng với nghỉ ngơi.</p></article>
+    <article class="card"><div class="icon">🌍</div><h3>Với mọi người</h3><p>Biết quan tâm, sẻ chia và góp sức vào những việc nhỏ có ích cho lớp học, trường học và cộng đồng.</p></article>
+  </div>
+</section>
+
+<section class="section" id="memories">
+  <div class="section-head">
+    <div class="eyebrow">A little scrapbook</div>
+    <h2>Những điều mình muốn lưu giữ</h2>
+    <p>Một góc dành cho ảnh, tranh vẽ, chuyến đi và những khoảnh khắc khiến mình mỉm cười.</p>
+  </div>
+  <div class="grid">
+    <article class="card"><div class="icon">🖼️</div><h3>My art gallery</h3><p>Những bức tranh mình đã vẽ, từ nét phác thảo đầu tiên đến những tác phẩm mình yêu quý nhất.</p></article>
+    <article class="card"><div class="icon">🧳</div><h3>Travel diary</h3><p>Địa điểm mình từng đến, món ăn từng thử và những kỷ niệm nho nhỏ trên mỗi hành trình.</p></article>
+    <article class="card"><div class="icon">🌼</div><h3>Little happy moments</h3><p>Những ngày đáng nhớ bên gia đình, bạn bè, những thành tích nhỏ và khoảnh khắc bình yên.</p></article>
+  </div>
+  <p class="small-note" style="text-align:center;margin-top:18px">Góc lưu giữ những điều đáng nhớ — sẽ càng đặc biệt hơn khi được bổ sung bằng ảnh và tranh do chính Oanh chọn.</p>
+</section>
+
+<section class="section" id="little-facts">
+  <div class="section-head">
+    <div class="eyebrow">Fun little facts</div>
+    <h2>Vài mẩu chuyện nhỏ về Oanh</h2>
+  </div>
+  <div class="mini-grid">
+    <article class="card"><h3>🍃 Nếu là một mùa…</h3><p>Mình muốn là mùa xuân — dịu dàng, tươi mới và luôn có cơ hội để bắt đầu lại.</p></article>
+    <article class="card"><h3>🎨 Nếu là một màu…</h3><p>Chắc chắn là vàng bơ hoặc xanh lá pastel: nhẹ nhàng, ấm áp và mang cảm giác bình yên.</p></article>
+    <article class="card"><h3>🌻 Một điều mình trân trọng</h3><p>Những người chân thành, những lời hỏi han giản dị và cảm giác được là chính mình.</p></article>
+    <article class="card"><h3>✨ Một câu nhắc nhở</h3><p>Không cần đi nhanh hơn tất cả mọi người; chỉ cần đừng ngừng học hỏi và trưởng thành.</p></article>
+  </div>
+</section>
+
+<section class="section" id="dream">
+<div class="section-head"><div class="eyebrow">Một điều mình tin</div><h2>Chậm rãi lớn lên, tử tế mỗi ngày</h2></div>
+<div class="note"><div style="font-size:2rem">🌱</div><blockquote>“Hôm nay tốt hơn hôm qua một chút, ngày mai nỗ lực hơn hôm nay một chút.”</blockquote><p>Mình không cần một ước mơ thật xa vời. Mình chỉ mong có thể trưởng thành thành một người tử tế, biết lắng nghe, biết sẻ chia và dùng những điều mình có để giúp đỡ mọi người, đóng góp một phần nhỏ bé nhưng có ích cho cộng đồng.</p></div>
+</section>
+<div class="closing"><div><h2>Cứ nở hoa theo cách của mình 🌼</h2><p>Không cần vội vàng — chỉ cần không ngừng vun trồng.</p></div><div class="flower">🍋🌿</div></div>
+</main>
+<footer>Được vun trồng bằng một chút nắng, một chút xanh và rất nhiều hy vọng.<br><strong>Ngọc Oanh</strong> · 10A06 · THPT Phú Nhuận</footer>
+
+<div id="detail-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal-card">
+    <button class="modal-close" id="modal-close" type="button" aria-label="Đóng cửa sổ">×</button>
+    <div style="font-size:2rem;margin-bottom:8px" id="modal-emoji">🌼</div>
+    <h3 id="modal-title">Một điều nho nhỏ</h3>
+    <p id="modal-description">Cảm ơn bạn đã ghé thăm khu vườn nhỏ của Oanh.</p>
+  </div>
+</div>
+<button id="top-button" type="button" aria-label="Lên đầu trang">↑</button>
+<script>
+(() => {
+  const progress = document.createElement('div');
+  progress.id = 'reading-progress';
+  progress.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(progress);
+
+  // Reveal sections as they enter the screen.
+  const revealTargets = document.querySelectorAll('.section, .closing, .note, .favorite-box, .timeline .card, .mini-grid .card');
+  revealTargets.forEach((el) => el.classList.add('reveal'));
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealTargets.forEach((el) => observer.observe(el));
+  } else {
+    revealTargets.forEach((el) => el.classList.add('visible'));
+  }
+
+  // Make each information card open a small detail window.
+  const modal = document.getElementById('detail-modal');
+  const closeModal = () => modal.classList.remove('open');
+  document.querySelectorAll('.card').forEach((card) => {
+    card.setAttribute('tabindex', '0');
+    card.setAttribute('role', 'button');
+    card.setAttribute('aria-label', 'Xem thêm: ' + (card.querySelector('h3')?.textContent || 'thông tin'));
+    const openCard = () => {
+      document.getElementById('modal-title').textContent = card.querySelector('h3')?.textContent || 'Một điều nho nhỏ';
+      document.getElementById('modal-description').textContent = card.querySelector('p')?.textContent || 'Cảm ơn bạn đã ghé thăm khu vườn nhỏ của Oanh.';
+      document.getElementById('modal-emoji').textContent = card.querySelector('.icon')?.textContent || '🌼';
+      modal.classList.add('open');
+      document.getElementById('modal-close').focus();
+    };
+    card.addEventListener('click', openCard);
+    card.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); openCard(); }
+    });
+  });
+  document.getElementById('modal-close').addEventListener('click', closeModal);
+  modal.addEventListener('click', (event) => { if (event.target === modal) closeModal(); });
+  document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeModal(); });
+
+  const messages = [
+    '🌱 Mỗi bước nhỏ hôm nay đều có thể tạo nên một ngày mai tốt đẹp hơn.',
+    '🍋 Đừng quên dành cho bản thân một chút dịu dàng nhé!',
+    '🌼 Bạn không cần hoàn hảo mới có thể bắt đầu.',
+    '🌿 Cứ phát triển theo nhịp độ của riêng mình.',
+    '☀️ Mong hôm nay có một điều nhỏ xíu khiến bạn mỉm cười.'
+  ];
+  const surprises = [
+    '🍋 Bí mật nhỏ: màu vàng và xanh lá chính là bảng màu của khu vườn này!',
+    '🌷 Một chiếc nhắc nhở: nghỉ ngơi cũng là một phần của trưởng thành.',
+    '📚 Mỗi cuốn sách mở ra một cánh cửa mới.',
+    '🎨 Một ý tưởng nhỏ cũng có thể trở thành tác phẩm tuyệt vời.',
+    '🌍 Làm một việc tử tế nho nhỏ cũng có thể khiến ngày của ai đó tốt hơn.'
+  ];
+  const message = document.getElementById('surprise-message');
+  document.getElementById('message-button').addEventListener('click', () => {
+    message.textContent = messages[Math.floor(Math.random() * messages.length)];
+    sparkleAt(window.innerWidth / 2, window.innerHeight * 0.72);
+  });
+  document.getElementById('surprise-button').addEventListener('click', () => {
+    message.textContent = surprises[Math.floor(Math.random() * surprises.length)];
+    sparkleAt(window.innerWidth / 2, window.innerHeight * 0.72);
+  });
+  function sparkleAt(x, y) {
+    const el = document.createElement('span');
+    el.className = 'sparkle';
+    el.textContent = ['✦', '✿', '🍋', '🌿'][Math.floor(Math.random() * 4)];
+    el.style.left = (x - 10 + (Math.random() * 70 - 35)) + 'px';
+    el.style.top = (y - 10) + 'px';
+    document.body.appendChild(el);
+    window.setTimeout(() => el.remove(), 900);
+  }
+
+  const topButton = document.getElementById('top-button');
+  function updateScroll() {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    progress.style.width = (max > 0 ? window.scrollY / max * 100 : 0) + '%';
+    topButton.classList.toggle('show', window.scrollY > 420);
+  }
+  window.addEventListener('scroll', updateScroll, { passive: true });
+  updateScroll();
+  topButton.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+})();
+</script>
+
+</body>
+</html>
